@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Hero = ({ links, activePath }) => {
-  const [heroText, setHeroText] = useState('Ideas');
+  const [heroText, setHeroText] = useState('');
 
   useEffect(() => {
     const currentLink = links.find((link) => {
@@ -12,7 +12,7 @@ const Hero = ({ links, activePath }) => {
       return activePath.startsWith(link.link);
     });
 
-    setHeroText(currentLink ? currentLink.label : 'Career');
+    setHeroText(currentLink ? currentLink.label : 'Ideas');
   }, [activePath, links]);
 
   return (

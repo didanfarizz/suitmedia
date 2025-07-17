@@ -20,6 +20,7 @@ function App() {
     { label: 'Oldest', value: 'oldest' },
   ];
 
+  // sort page
   const sortedAndPaginatedArticles = useMemo(() => {
     const sorted = [...articles].sort((a, b) => {
       const dateA = new Date(a.date);

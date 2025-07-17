@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/navbar';
+import AppNavbar from './components/AppNavbar';
 import Hero from './components/hero';
 import './index.css';
 import ListPost from './components/ListPost';
@@ -29,7 +29,7 @@ const AppContent = () => {
 
   return (
     <>
-      <Navbar links={appLinks} activePath={activePath} />
+      <AppNavbar links={appLinks} activePath={activePath} />
       <Hero links={appLinks} activePath={activePath} />
 
       <main className="container mx-auto px-4 py-8" style={{ paddingTop: '100px' }}>

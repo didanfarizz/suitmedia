@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Hero = ({ links, activePath }) => {
-  const [heroText, setHeroText] = useState('Career');
+  const [heroText, setHeroText] = useState('Ideas');
 
   useEffect(() => {
     const currentLink = links.find((link) => {

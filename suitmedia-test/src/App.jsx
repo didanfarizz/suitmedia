@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Hero from './components/hero';
-import './index.css';
+import './index.css'; 
 import ListPost from './components/ListPost';
 
 const appLinks = [
@@ -27,9 +27,13 @@ const AppContent = () => {
       <Navbar links={appLinks} activePath={activePath} />
       <Hero links={appLinks} activePath={activePath} />
 
-      <div className="relative z-50">
-        <ListPost />
-      </div>
+      <main className="container mx-auto px-4 py-8" style={{ paddingTop: '100px' }}>
+        <Routes>
+          {appLinks.map((link) => (
+            <Route key={link.id} path={link.link} element={<ListPost />} />
+          ))}
+        </Routes>
+      </main>
     </>
   );
 };

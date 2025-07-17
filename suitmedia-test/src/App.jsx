@@ -27,13 +27,9 @@ const AppContent = () => {
       <Navbar links={appLinks} activePath={activePath} />
       <Hero links={appLinks} activePath={activePath} />
 
-      <main className="container mx-auto px-4 py-8" style={{ paddingTop: '100px' }}>
-        <Routes>
-          {appLinks.map((link) => (
-            <Route key={link.id} path={link.link} element={<ListPost />} />
-          ))}
-        </Routes>
-      </main>
+      <div className="relative z-50">
+        <ListPost />
+      </div>
     </>
   );
 };

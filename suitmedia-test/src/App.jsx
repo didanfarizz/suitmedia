@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/navbar';
 import Hero from './components/hero';
-import './index.css'; 
+import './index.css';
 import ListPost from './components/ListPost';
 
 const appLinks = [

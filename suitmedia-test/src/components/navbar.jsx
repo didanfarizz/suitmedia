@@ -1,4 +1,5 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@heroui/react';
+import { NavLink } from 'react-router-dom';
 import WorkPage from '../pages/WorkPage';
 import AboutPage from '../pages/AboutPage';
 import ServicesPage from '../pages/Services';
@@ -28,9 +29,9 @@ export default function App() {
       <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem className='space-x-5 text-white '>
           {links.map((link) => (
-            <Link key={link.id} href={link.link} element={link.path} className='hover:underline hover:underline-offset-8 hover:transition-all'>
+            <NavLink key={link.id} href={link.link} element={link.path} className='hover:underline hover:underline-offset-8 hover:transition-all'>
               {link.name}
-            </Link>
+            </NavLink>
           ))}
         </NavbarItem>
       </NavbarContent>
